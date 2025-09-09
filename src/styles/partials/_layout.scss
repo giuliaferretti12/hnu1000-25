@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  margin: 0 2em;
+  text-align: left; 
+  //margin: 0 auto;
+  //padding-right: var(--spacing);
+  //padding-left: var(--spacing);
+}
+
+footer .container {
+  margin-top: 0;
+}
+
+article {
+  overflow: auto;
+}
+
+@include aboveMediumBreakpoint {
+  .container {
+    max-width: 41rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@include belowMenuBreakpoint {
+  .container {
+    margin-top: 6.6rem;
+  }
+}
+
+@include biggerThanMobile {
+  .container {
+    max-width: 56.87rem;
+  }
+}

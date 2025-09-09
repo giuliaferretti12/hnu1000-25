@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliographie du Groupe Zotero</title>
+</head>
+<body>
+
+    <h1>Bibliographie de Mon Groupe Zotero</h1>
+
+    <div id="bibliographie"></div>
+
+    <script>
+
+        const apiUrl = `https://api.zotero.org/groups/tonIdGroupeZotero/items/top?format=json&key=taCleApiZotero}`;
+
+        // Fonction pour obtenir et afficher la bibliographie du groupe
+        async function recupererBibliographieGroupeZotero() {
+            try {
+                const reponse = await fetch(apiUrl);
+                const donnees = await reponse.json();
+
+                // Vérifie s'il y a des éléments dans la bibliographie du groupe
+                if (donnees && donnees.length > 0) {
+                    const conteneurBibliographie = document.getElementById('bibliographie');
+
+                    // Crée une liste non ordonnée pour la bibliographie
+                    const listeBibliographie = document.createElement('ul');
+
+                    // Itère sur les éléments de la bibliographie du groupe et crée un élément de liste pour chacun
+                    donnees.forEach(element => {
+                        const elementListe = document.createElement('li');
+
+                        // Ajoute les informations de l'élément à la liste
+                        elementListe.innerHTML = `<strong>${element.data.title}</strong> - ${element.data.publisher}, ${element.data.date}`;
+
+                        // Ajoute l'élément de liste à la liste principale
+                        listeBibliographie.appendChild(elementListe);
+                    });
+
+                    // Ajoute la liste au conteneur de la bibliographie
+                    conteneurBibliographie.appendChild(listeBibliographie);
+                } else {
+                    console.error('Aucun élément trouvé dans la bibliographie du groupe.');
+                }
+            } catch (erreur) {
+                console.error('Erreur lors de la récupération de la bibliographie du groupe :', erreur);
+            }
+        }
+
+        // Appelle la fonction pour obtenir et afficher la bibliographie du groupe lors du chargement de la page
+        window.onload = recupererBibliographieGroupeZotero;
+    </script>
+
+</body>
+</html>
