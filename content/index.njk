@@ -3,7 +3,7 @@ layout: base
 eleventyExcludeFromCollections: true
 pagination:
   data: collections.publishedPosts
-  size: 10
+  size: 20
   alias: posts
 permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{% endif %}/index.html"
 ---

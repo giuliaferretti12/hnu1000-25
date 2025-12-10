@@ -146,7 +146,7 @@ module.exports = {
     // your tag pages will look like this: https://yoursite.org/tag/foo
     pageUrlPrefix: 'tag',
     // How many posts should be visible on tag pages until pagination is used?
-    postsPerPage: 10,
+    postsPerPage: 100,
   },
   // ---------------------------------------------------------------------------
   // Settings for PWA
@@ -212,7 +212,7 @@ module.exports = {
       // Path of RSS feed displaying post excerpts
       path: '/excerpts.xml',
       // How many posts should be presented in excerpts-only RSS feed?
-      limit: 10,
+      limit: 11,
     },
     // Settings for RSS feed displaying full post contents
     full: {
@@ -221,7 +221,7 @@ module.exports = {
       // Path of RSS feed displaying only post excerpts
       path: '/full.xml',
       // How many posts should be presented in full-post-contents RSS feed?
-      limit: 10,
+      limit: 11,
     },
   },
   // ---------------------------------------------------------------------------
@@ -238,7 +238,7 @@ module.exports = {
       // used as permalink in the template
       path: '/excerpts.json',
       // How many posts should be presented in excerpts-only JSON feed?
-      limit: 10,
+      limit: 11,
     },
     // Settings for JSON feed displaying full post contents
     full: {
@@ -248,7 +248,7 @@ module.exports = {
       // used as permalink in the template
       path: '/full.json',
       // How many posts should be presented in full-post-contents JSON feed?
-      limit: 10,
+      limit: 11,
     },
   },
   // ---------------------------------------------------------------------------
