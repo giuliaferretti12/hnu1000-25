@@ -60,9 +60,9 @@ La majeure partie de chaque séance sera consacrée à un enseignement magistral
 
 Plusieurs modalités d’évaluation sont prévues pour valider les acquis des étudiant·e·s : 
 
-- Participation en classe et discussions sur les lectures préparatoires : 20 %
+- Participation en classe et discussions sur les lectures préparatoires : 10 %
 
-- Examen écrit en cours de semestre (30 octobre à 12h30) : 40%
+- Examen écrit en cours de semestre (30 octobre à 12h30) : 45 %
 
-- Examen écrit final (18 décembre à 12h30) : 40 %
+- Examen écrit final (18 décembre à 12h30) : 45 %
 
